@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LambdaForrums.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace LambdaForums.Data
-{
-    public class ApplicationDbContext : IdentityDbContext
-    {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
+namespace LambdaForums.Data {
+  public class ApplicationDbContext : IdentityDbContext {
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options) {
     }
+
+    public DbSet<Forum> Forums { get; set; }
+    public DbSet<Post> Posts { get; set; }
+    public DbSet<PostReply> PostReplies { get; set; }
+
+  }
 }
