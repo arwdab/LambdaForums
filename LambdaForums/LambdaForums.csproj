@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LambdaForrums.Data\LambdaForrums.Data.csproj" />
+    <ProjectReference Include="..\LambdaForrums.Data\LambdaForums.Data.csproj" />
   </ItemGroup>
 
 </Project>

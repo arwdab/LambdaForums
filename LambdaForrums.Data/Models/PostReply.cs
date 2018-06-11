@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 
-namespace LambdaForrums.Data.Models {
+namespace LambdaForums.Data.Models {
   public class PostReply {
     public int Id { get; set; }
     public string Content { get; set; }

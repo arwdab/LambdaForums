@@ -1,4 +1,4 @@
-﻿using LambdaForrums.Data.Models;
+﻿using LambdaForums.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

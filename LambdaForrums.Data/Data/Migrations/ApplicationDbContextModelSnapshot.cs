@@ -19,7 +19,7 @@ namespace LambdaForums.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("LambdaForrums.Data.Models.Forum", b =>
+            modelBuilder.Entity("LambdaForums.Data.Models.Forum", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace LambdaForums.Data.Migrations
                     b.ToTable("Forums");
                 });
 
-            modelBuilder.Entity("LambdaForrums.Data.Models.Post", b =>
+            modelBuilder.Entity("LambdaForums.Data.Models.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,7 +63,7 @@ namespace LambdaForums.Data.Migrations
                     b.ToTable("Posts");
                 });
 
-            modelBuilder.Entity("LambdaForrums.Data.Models.PostReply", b =>
+            modelBuilder.Entity("LambdaForums.Data.Models.PostReply", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -251,9 +251,9 @@ namespace LambdaForums.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("LambdaForrums.Data.Models.Post", b =>
+            modelBuilder.Entity("LambdaForums.Data.Models.Post", b =>
                 {
-                    b.HasOne("LambdaForrums.Data.Models.Forum", "Forum")
+                    b.HasOne("LambdaForums.Data.Models.Forum", "Forum")
                         .WithMany("Posts")
                         .HasForeignKey("ForumId");
 
@@ -262,9 +262,9 @@ namespace LambdaForums.Data.Migrations
                         .HasForeignKey("UserId");
                 });
 
-            modelBuilder.Entity("LambdaForrums.Data.Models.PostReply", b =>
+            modelBuilder.Entity("LambdaForums.Data.Models.PostReply", b =>
                 {
-                    b.HasOne("LambdaForrums.Data.Models.Post", "Post")
+                    b.HasOne("LambdaForums.Data.Models.Post", "Post")
                         .WithMany("Replies")
                         .HasForeignKey("PostId");
 
