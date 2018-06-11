@@ -31,7 +31,7 @@ namespace LambdaForums.Data.Migrations
 
                     b.Property<string>("Title");
 
-                    b.Property<string>("gDescription");
+                    b.Property<string>("Description");
 
                     b.HasKey("Id");
 

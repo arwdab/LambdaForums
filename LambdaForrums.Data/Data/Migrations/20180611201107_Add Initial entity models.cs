@@ -15,7 +15,7 @@ namespace LambdaForums.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Title = table.Column<string>(nullable: true),
-                    gDescription = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
                     Created = table.Column<DateTime>(nullable: false),
                     ImageUrl = table.Column<string>(nullable: true)
                 },
