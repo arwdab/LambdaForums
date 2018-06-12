@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using LambdaForums.Data;
 using LambdaForums.Data.Models;
@@ -31,7 +32,12 @@ namespace LambdaForums.Service {
     }
 
     public Forum GetById(int id) {
-      throw new System.NotImplementedException();
+      return context
+              .Forums
+              .Where(forum => forum.Id == id)
+              .Include(forum => forum.Posts).ThenInclude(post => post.User)
+              .Include(forum => forum.Posts).ThenInclude(post => post.Replies).ThenInclude(reply => reply.User)
+              .FirstOrDefault();
     }
 
     public Task UpdateForumDescription(int forumId, string description) {
