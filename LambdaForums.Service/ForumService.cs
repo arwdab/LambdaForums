@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace LambdaForums.Service {
-  public class ForumService : IForum {
+  public class ForumService : IForumService {
     private readonly ApplicationDbContext context;
 
     public ForumService(ApplicationDbContext context) {

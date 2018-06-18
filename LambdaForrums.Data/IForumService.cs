@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace LambdaForums.Data {
-  public interface IForum {
+  public interface IForumService {
     Forum GetById(int id);
     IEnumerable<Forum> GetAll();
     IEnumerable<IdentityUser> GetAllActiveUsers();
