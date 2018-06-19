@@ -15,4 +15,10 @@
     <ProjectReference Include="..\LambdaForums.Service\LambdaForums.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Forum\Topic.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>
