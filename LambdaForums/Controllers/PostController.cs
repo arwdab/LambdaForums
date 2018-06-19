@@ -15,8 +15,8 @@ namespace LambdaForums.Controllers {
       this.postService = postService ?? throw new ArgumentNullException(nameof(postService));
     }
 
-    public IActionResult Index(int postId) {
-      var post = postService.GetById(postId);
+    public IActionResult Index(int id) {
+      var post = postService.GetById(id);
       var replies = BuildPostReplies(post.Replies);
 
       var model = new PostIndexModel() { 

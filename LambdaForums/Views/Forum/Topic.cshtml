@@ -8,7 +8,7 @@
     <tbody>
       @foreach (var post in Model.Posts) {
       <tr>
-        <td><a asp-controler="Post" asp-action="Index" asp-route-id="@post.Id">@post.Title</a></td>
+        <td><a asp-controller="Post" asp-action="Index" asp-route-id="@post.Id">@post.Title</a></td>
         <td>@post.AuthorName</td>
         <td>@post.DatePosted</td>
         <td>@post.RepliesCount</td>
