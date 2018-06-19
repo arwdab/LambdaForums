@@ -32,7 +32,9 @@ namespace LambdaForums {
         .AddDefaultIdentity<ApplicationUser>()
         .AddEntityFrameworkStores<ApplicationDbContext>();
 
-      services.AddScoped<IForumService, ForumService>();
+      services
+        .AddScoped<IForumService, ForumService>()
+        .AddScoped<IPostService, PostService>();
 
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
     }
