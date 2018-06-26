@@ -14,8 +14,9 @@ namespace LambdaForums.Service {
       this.context = context ?? throw new ArgumentNullException(nameof(context));
     }
 
-    public Task Add(Post forum) {
-      throw new NotImplementedException();
+    public async Task Add(Post post) {
+      context.Add(post);
+      await context.SaveChangesAsync();
     }
 
     public Task Delete(int id) {

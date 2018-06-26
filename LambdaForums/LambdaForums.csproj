@@ -19,6 +19,9 @@
     <Content Update="Views\Forum\Topic.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Views\Post\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Post\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

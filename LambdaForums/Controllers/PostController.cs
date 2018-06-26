@@ -62,15 +62,17 @@ namespace LambdaForums.Controllers {
       await postService.Add(post);
       // TODO: Implement User.Rating
 
-      return RedirectToAction("Index", "Post", post.Id);
+      return RedirectToAction("Index", "Post", new { id = post.Id });
     }
 
     private Post BuildPostModel(NewPostModel model, ApplicationUser user) {
+      var forum = forumService.GetById(model.ForumId);
       return new Post() {
         Title = model.Title,
         Content = model.Content,
         Created = DateTime.Now,
-        User = user
+        User = user,
+        Forum = forum
       };
     }
 

@@ -9,7 +9,7 @@ namespace LambdaForums.Data {
     IEnumerable<Post> GetFilteredPosts(string searchQuery);
     IEnumerable<Post> GetPostsByForums(int forumId);
 
-    Task Add(Post forum);
+    Task Add(Post post);
     Task Delete(int id);
     Task EditPostContent(int forumId, string content);
   }
